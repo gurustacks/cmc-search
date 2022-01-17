@@ -1,6 +1,6 @@
 const chrome = require('chrome-aws-lambda');
 const puppeteer = require('puppeteer-core');
-const UserAgent = require("user-agents");
+
 
 exports.handler = async function(event, context, callback) {
 

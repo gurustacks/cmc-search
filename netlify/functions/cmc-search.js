@@ -1,6 +1,6 @@
 const chrome = require('chrome-aws-lambda');
 const puppeteer = require('puppeteer-core');
-const UserAgent = require("user-agents");
+
 
 exports.handler = async function(event, context) {
 
@@ -12,7 +12,7 @@ exports.handler = async function(event, context) {
     });
     
     const page = await browser.newPage();
-    
+
     try {
         await page.goto('https://ipinfo.io/json');
     } catch(err) {
