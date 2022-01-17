@@ -1,0 +1,26 @@
+{
+  "name": "cmc-upvote",
+  "version": "1.0.0",
+  "description": "Script to upvote a specific project on CMC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "env": "^0.0.2",
+    "ipware": "^2.0.0",
+    "puppeteer": "^13.0.1",
+    "puppeteer-cluster": "^0.22.0",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-adblocker": "^2.12.0",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.3.3",
+    "puppeteer-extra-plugin-stealth": "^2.9.0",
+    "puppeteer-extra-plugin-timezone": "^1.0.5",
+    "puppeteer-page-proxy": "^1.2.8",
+    "user-agents": "^1.0.896",
+    "zyte-smartproxy-puppeteer": "^1.0.2"
+  }
+}
