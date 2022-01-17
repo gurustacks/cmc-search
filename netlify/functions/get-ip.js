@@ -11,7 +11,6 @@ exports.handler = async function(event, context, callback) {
     });
     
     const page = await browser.newPage();
-    await page.setUserAgent(new UserAgent().toString());
     
     response = await page.goto('https://ipinfo.io/json');
     url = page.url();
