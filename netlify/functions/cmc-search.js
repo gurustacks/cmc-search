@@ -8,13 +8,11 @@ exports.handler = async function(event, context) {
         args: chrome.args,
         executablePath: process.env.CHROME_EXECUTABLE_PATH || await chrome.executablePath,
         headless: chrome.headless,
-        ignoreSSLErrors: chrome.ignoreSSLErrors,
-        userAgent: new UserAgent({ deviceCategory: 'mobile' }).toString()
+        ignoreSSLErrors: chrome.ignoreSSLErrors
     });
     
     const page = await browser.newPage();
-    console.log(await browser.userAgent());
-
+    
     try {
         await page.goto('https://ipinfo.io/json');
     } catch(err) {

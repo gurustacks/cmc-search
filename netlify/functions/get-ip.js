@@ -12,10 +12,9 @@ exports.handler = async function(event, context, callback) {
     
     const page = await browser.newPage();
     await page.setUserAgent(new UserAgent().toString());
-    const useragent = await page.evaluate(() => navigator.userAgent); 
     
     response = await page.goto('https://ipinfo.io/json');
-    url = await page.url();
+    url = page.url();
     ip = await page.evaluate(() => {
         json_data =  document.querySelector('body').innerText;
         ip = JSON.parse(json_data).ip;
@@ -29,7 +28,6 @@ exports.handler = async function(event, context, callback) {
         statusCode: 200,
         body: JSON.stringify({
             url: url,
-            useragent: useragent,
             ip: ip
         })
     }
