@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
     const browser = await puppeteer.launch({
         args: chrome.args,
         executablePath: process.env.CHROME_EXECUTABLE_PATH || await chrome.executablePath,
-        headless: chrome.headless,
+        headless: false,
         ignoreSSLErrors: chrome.ignoreSSLErrors
     });
     
