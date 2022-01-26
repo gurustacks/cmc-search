@@ -52,7 +52,7 @@ def run(playwright: Playwright) -> None:
         #with page.expect_navigation():
         page.click("text=Decentraland")
         # assert page.url == "https://coinmarketcap.com/currencies/decentraland/"
-        page.evaluate("window.scroll(0,900);")
+        page.evaluate("() => { window.scroll(0,900); }")
         # Click text=👍 Good
         page.click("text=👍 Good")
         # Click text=×
