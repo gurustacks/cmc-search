@@ -1,5 +1,6 @@
 from playwright.sync_api import Playwright, sync_playwright
 from playwright_stealth import stealth_sync
+import multiprocessing
 
 import random 
 
@@ -13,13 +14,16 @@ def get_proxy():
     proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-DE-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
     proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-US-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
     proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-CA-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-UK-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-SE-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-FR-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
 
 
     return random.choice(proxies)
     
 
 def run(playwright: Playwright) -> None:
-    
+
     try:
         proxy = get_proxy()
         proxy_test = {"server": f"http://{proxy['ip']}:{proxy['port']}", "username": f"{proxy['username']}", "password": f"{proxy['password']}"}
@@ -75,9 +79,14 @@ def run(playwright: Playwright) -> None:
 
 with sync_playwright() as playwright:
     while True:
-        run(playwright)
-        run(playwright)
-        run(playwright)
-        run(playwright)
-        
+        pool = multiprocessing.Pool()
+        pool = multiprocessing.Pool(processes=10)
+        inputs = [
+            "special", "A",
+            "B", "C",
+            "D", "E",
+            "F", "G",
+            "H", "I",
+            ]
+        outputs = pool.map(run(playwright), inputs)        
         
