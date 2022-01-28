@@ -1,4 +1,4 @@
-#!/Users/barrydaniels/Github/cmc-search/venv/bin/python3.9
+#!/Users/barrydaniels/Documents/GitHub/cmc-search/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
