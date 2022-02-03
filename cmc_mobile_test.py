@@ -133,7 +133,7 @@ def test_search_for_coin(page):
 
         """
     )
-    page.click("text=👍 Good")
+
 
 def test_search_for_coin1(page):
     
@@ -179,7 +179,7 @@ def test_search_for_coin1(page):
 
         """
     )
-    page.click("text=👍 Good")
+
 
 def test_search_for_coin2(page):
     
@@ -227,5 +227,437 @@ def test_search_for_coin2(page):
         """
     )
     page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
-    page.wait_for_timeout(5000)
+
+
+def test_search_for_coin3(page):
     
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
+def test_search_for_coin4(page):
+    
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
+def test_search_for_coin5(page):
+    
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
+def test_search_for_coin6(page):
+    
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
+def test_search_for_coin7(page):
+    
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
+def test_search_for_coin8(page):
+    
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
+def test_search_for_coin9(page):
+    
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
+def test_search_for_coin10(page):
+    
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
+def test_search_for_coin11(page):
+    
+    # Don't load images 
+    page.route("**/*.svg", lambda route: route.abort()) 
+    page.route("**/*.png", lambda route: route.abort()) 
+    page.route("**/*.jpg", lambda route: route.abort())
+    page.route("**/*.woff2", lambda route: route.abort())
+    page.route("**/inpage.js", lambda route: route.abort())
+    page.route("facebook.com", lambda route: route.abort())
+    page.route("google.com", lambda route: route.abort())
+    page.route("googletagmanager.com", lambda route: route.abort())
+    page.route("jsdelivr.net", lambda route: route.abort())
+    page.route("sensors.binance.cloud", lambda route: route.abort())
+
+   
+    # Goto page
+    page.goto("https://coinmarketcap.com/newsletter", wait_until="domcontentloaded")
+
+    # Check if search field has loaded, click it and enter text. 
+    #assert page.inner_text('#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(1) > div > div.sc-111rrsy-0.qbrWo > div:nth-child(6) > div > div.sc-266vnq-1.gffsPR') == 'Search'
+
+    page.click("#__next > div > div.main-content > div.bywovg-0.kuGegY > div:nth-child(2) > div > nav > div > div:nth-child(2) > svg")
+    page.click("[placeholder=\"What\\ are\\ you\\ looking\\ for\\?\"]")
+    page.keyboard.press("M")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("N")
+    page.wait_for_timeout(500)
+    page.keyboard.press("A")
+    page.wait_for_timeout(500)
+    page.keyboard.press("Enter")
+    
+    
+    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
+    
+    height = page.context.viewport.height
+
+    page.evaluate(
+        """
+        var intervalID = setInterval(function () {
+            scroll(0,4000);
+        }, 200);
+        """
+    )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+
