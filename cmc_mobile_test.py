@@ -222,9 +222,10 @@ def test_search_for_coin2(page):
     page.evaluate(
         """
         var intervalID = setInterval(function () {
-            document.querySelector("#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)").scrollIntoView();
+            scroll(0,4000);
         }, 200);
         """
     )
+    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
     page.wait_for_timeout(5000)
-    page.click("text=👍 Good")
+    
