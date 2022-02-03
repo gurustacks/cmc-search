@@ -8,16 +8,16 @@ import random
 def browser_context_args(browser_context_args):
 
     proxies = []
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-AT-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-DK-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-BE-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-NL-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-DE-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-US-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-CA-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-UK-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-SE-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
-    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_qZ3dpkhEnz-country-FR-autoReplace-True", "password": "1cc56099-7549-4fc9-8232-ea5bb7496d74", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-AT-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-DK-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-BE-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-NL-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-DE-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-US-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-CA-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-UK-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-SE-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
+    proxies.append({"ip": "rotating-residential.geonode.com", "username": "geonode_VNZbfxQtdH-country-FR-autoReplace-True", "password": "b4bf3a63-7ed2-4b2d-ae4d-37f42628e65b", "port": "9000"})
 
     proxy =  random.choice(proxies)
 
