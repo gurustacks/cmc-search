@@ -80,13 +80,13 @@ def browser_context_args(browser_context_args, playwright):
                'iPad (gen 7)',
                'Galaxy Note II']
     
-    proxy =  random.choice(proxies)
+    #proxy =  random.choice(proxies)
     device = playwright.devices[random.choice(devices)]
-
+    
     return {
         **browser_context_args,
         **device,
-        "proxy": {"server": f"http://{proxy['ip']}:{proxy['port']}", "username": f"{proxy['username']}", "password": f"{proxy['password']}"}
+        # "proxy": {"server": f"http://{proxy['ip']}:{proxy['port']}", "username": f"{proxy['username']}", "password": f"{proxy['password']}"}
     }
 
 def test_search_for_coin(page):
@@ -123,16 +123,15 @@ def test_search_for_coin(page):
     page.keyboard.press("Enter")
     
     
-    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
     
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,1100);
-        }, 200);
-
-        """
-    )
+    
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
 
 
 def test_search_for_coin1(page):
@@ -169,16 +168,15 @@ def test_search_for_coin1(page):
     page.keyboard.press("Enter")
     
     
-    page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
     
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,1250);
-        }, 200);
-
-        """
-    )
+    
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
 
 
 def test_search_for_coin2(page):
@@ -216,17 +214,16 @@ def test_search_for_coin2(page):
     
     
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
-    
-    height = page.context.viewport.height
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin3(page):
@@ -264,17 +261,15 @@ def test_search_for_coin3(page):
     
     
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
-    
-    height = page.context.viewport.height
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin4(page):
@@ -312,17 +307,15 @@ def test_search_for_coin4(page):
     
     
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
-    
-    height = page.context.viewport.height
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    # page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin5(page):
@@ -358,19 +351,17 @@ def test_search_for_coin5(page):
     page.wait_for_timeout(500)
     page.keyboard.press("Enter")
     
-    
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
     
-    height = page.context.viewport.height
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin6(page):
@@ -405,20 +396,18 @@ def test_search_for_coin6(page):
     page.keyboard.press("A")
     page.wait_for_timeout(500)
     page.keyboard.press("Enter")
-    
-    
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
     
-    height = page.context.viewport.height
+    
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin7(page):
@@ -454,19 +443,17 @@ def test_search_for_coin7(page):
     page.wait_for_timeout(500)
     page.keyboard.press("Enter")
     
-    
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
     
-    height = page.context.viewport.height
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin8(page):
@@ -502,19 +489,17 @@ def test_search_for_coin8(page):
     page.wait_for_timeout(500)
     page.keyboard.press("Enter")
     
-    
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
     
-    height = page.context.viewport.height
-
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin9(page):
@@ -552,17 +537,15 @@ def test_search_for_coin9(page):
     
     
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
-    
-    height = page.context.viewport.height
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin10(page):
@@ -600,17 +583,15 @@ def test_search_for_coin10(page):
     
     
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
-    
-    height = page.context.viewport.height
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
 def test_search_for_coin11(page):
@@ -648,16 +629,14 @@ def test_search_for_coin11(page):
     
     
     page.wait_for_url("https://coinmarketcap.com/currencies/decentraland/", wait_until="domcontentloaded")
-    
-    height = page.context.viewport.height
 
-    page.evaluate(
-        """
-        var intervalID = setInterval(function () {
-            scroll(0,4000);
-        }, 200);
-        """
-    )
-    page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
+    #page.evaluate(
+    #    """
+    #    var intervalID = setInterval(function () {
+    #        scroll(0,4000);
+    #    }, 200);
+    #    """
+    #)
+    #page.click("selector=#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div.sc-16r8icm-0.sc-19zk94m-5.bsBMhQ > div > div.pqmllm-2.hLrBVF > button:nth-child(1)")
 
 
